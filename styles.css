@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Robot');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+  
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.nav >li{
+    list-style: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.finder{
+    width: 70%;
+    position: relative;
+    padding: 1%;
+
+}
+
+.finder > input{
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: -5px;
+    padding: 1%;
+    background-color: rgb(128, 128, 128, 0.212);
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    column-gap: 15px;
+
+}
+
+.container > div{
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: 20px;
+}
+
+.container img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 20px;
+}
+
+.card{
+    grid-row-end: span 26;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    align-items:  flex-start;
+    padding:  10px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.search_button {
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: hold;
+    cursor: pointer;
+    border-radius: 25px;
+    position: absolute;
+    justify-content: center;
+}
+
+@media all and(min-width: 421px) and (max-width: 768px){
+    .container{
+        grid-template-columns: repeat(auto-fill, 200px);
+    }
+    .search{
+        display: none;
+    }
+    .nav > li:nth-child(2){
+        font-weight: 500;
+        font-size: 15px;
+    }
+}
+
+@media all and(min-width: 50px) and (max-width: 420px){
+    .container{
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+    .container > div{
+        padding: 0;
+        margin: 8px 5px;
+        border-radius: 20px;
+    }
+    .nav{
+        padding: 2%;
+    }
+    .finder > input{
+        padding: 3%;
+    }
+    .nav > li>img{
+        width: 30px;
+        height: 30px;
+    }
+    .nav > li{
+        font-size: 12px;
+    }
+    .nav > li i{
+        display: none;
+    }
+}
+
+
+
+
+
